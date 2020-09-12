@@ -1,10 +1,11 @@
-# Vulkano
+# Amigo Secreto
+Un app para jugar amigo secreto en tiempos de pandemia.
 
 ## Stack
 
 ### API
-
 - Node.js
+- [VulkanoJS](https://https://github.com/vulkanojs/vulkano) (A MVC Framework for Node.js)
 - [Express](http://expressjs.com)
 - [Mongoose](http://mongoosejs.com/)
 - [Nunjucks](http://mozilla.github.io/nunjucks/) (Template Engine)
@@ -15,6 +16,7 @@
 - [WebPack](https://webpack.js.org/) (Bundle your scripts)
 
 ## Install
+- `yarn`
 
 ### System
 
@@ -29,78 +31,14 @@ $ yarn install
 
 ## Workflow
 
-| Command                         | Description                               |
-| :------------------------------	| :---------------------------------------- |
-| `npm run dev`                   | Run development server and watch changes	|
-| `npm run start`                 | Start development server                  |
-| `npm run production`						| Start production server                   |
-| `npm run pm2 --env=production`  | Start production server with PM2          |
-| `npm run deploy:heroku`         | Update Heroku app                         |
-| `npm run deploy:server`         | Deploy app into server                    |
-| `npm run gulp`                  | Start browsersync & sass                  |
-| `npm run webpack`               | Start webpack                             |
+| Command                          | Description                               |
+| :------------------------------- | :---------------------------------------- |
+| `yarn run dev`                   | Run development server and watch 4 changes|
+| `yarn run start`                 | Start development server                  |
+| `yarn run production`						 | Start production server                   |
+| `yarn run pm2 --env=production`  | Start production server with PM2          |
+| `yarn run deploy:heroku`         | Update Heroku app                         |
+| `yarn run deploy:server`         | Deploy app into server                    |
+| `yarn run gulp`                  | Start browsersync & sass                  |
+| `yarn run webpack`               | Start webpack                             |
 
-
-## Structure
-
-- `app/`
-- `client/`
-- `cms/`
-- `core/`
-- `public/` - HTTP Public folder
-- `Procfile` - Heroku entry point
-- `README.md`
-- `app.js` - Server entry point
-- `nodemon.json` - Nodemon entry point
-
-
-## Your App Folder
-
-### Config
-You can create any config enviroments as needed. By default, vulcano runs with NODE_ENV=development, in development mode. In productions servers, you should change NODE_ENV to _production_.
-
-#### connections.js
-
-#### policies.js
-
-#### routes.js
-
-#### server.js
-
-### Controllers
-
-### Helpers
-
-#### Filters
-
-### Models
-
-### Responses
-
-#### vsr.js
-
-### Services
-
-#### ActiveRecord.js
-
-#### AppController.js
-
-#### Filter.js
-
-#### Jwt.js (Json Web Token)
-
-#### Paginate.js
-
-#### Upload.js
-
-#### VSError.js
-
-### Views.js
-
-#### _shared
-
-##### Errors
-
-##### Partials
-
-##### Templates

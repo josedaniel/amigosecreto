@@ -1,8 +1,10 @@
-/* global __dirname, app */
+/* global app */
 
 /**
  * Server.js
  */
+
+require('dotenv').config();
 
 const express = require('express');
 const frameguard = require('frameguard');
@@ -166,7 +168,6 @@ module.exports = {
     }
     server.use(timeout(app.server.timeout !== undefined ? app.server.timeout : 120000));
     server.use(haltOnTimedout);
-
 
     /**
      * Json Web Token

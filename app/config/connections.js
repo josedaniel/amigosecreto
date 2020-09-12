@@ -4,10 +4,6 @@
  */
 module.exports = {
 
-  ivanmel: 'mongodb://localhost/vulkano',
-
-  development: 'mongodb://server/database',
-
-  production: 'mongodb://server/database'
+  database: process.env.DATABASE
 
 };
