@@ -421,6 +421,12 @@ window._app = {
     }
 
     return output;
+  },
+  borrar_memoria: function borrar_memoria(event) {
+    event.preventDefault();
+    delete localStorage.current_persona;
+    delete localStorage.elected_persona;
+    location.reload();
   }
 };
 

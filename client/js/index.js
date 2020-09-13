@@ -135,6 +135,13 @@ window._app = {
       output = localStorage.current_persona;
     }
     return output;
+  },
+
+  borrar_memoria(event) {
+    event.preventDefault();
+    delete localStorage.current_persona;
+    delete localStorage.elected_persona;
+    location.reload();
   }
 };
 

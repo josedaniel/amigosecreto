@@ -39,5 +39,15 @@
   </section>
   <footer>
     <p>Valor del regalo: $20k. Entrega de regalos: sábado 26 de septiembre 3pm.</p>
+
+    {% if test === 'test'  %}
+      <p style="color:red">
+        Modo de pruebas.
+      </p>
+      <script>
+        delete localStorage.current_persona;
+        delete localStorage.elected_persona;
+      </script>
+    {% endif %}
   </footer>
 {% endblock %}

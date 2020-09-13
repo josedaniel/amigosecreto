@@ -7,7 +7,7 @@
 module.exports = {
 
   get: (req, res) => {
-    res.render('index.njk');
+    res.render('index.njk', { test: 'test' });
   },
 
   listPersonas: (req, res) => {
@@ -16,5 +16,5 @@ module.exports = {
 
   savePersona: (req, res) => {
     res.vsr(Persona.savePersona(req.body));
-  }
+  },
 };
