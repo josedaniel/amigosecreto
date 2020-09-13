@@ -1,0 +1,53 @@
+{% extends "_shared/templates/default.njk" %}
+
+{% block content %}
+  <header>
+    <img src="/img/logo.png" alt="Amigo Secreto" />
+  </header>
+  <section id="welcome" class="active">
+    <h2>Paso 1: Elige tu nombre</h2>
+    <ul>
+      <li>
+        <span class="name">
+          <a href="">Jose Daniel</a>
+        </span>
+        <span class="status"><i class="mdi mdi-check-circle"></i></span>
+      </li>
+      <li>
+        <span class="name">
+          <a href="">Jose Daniel</a>
+        </span>
+        <span class="status"><i class="mdi mdi-check-circle"></i></span>
+      </li>
+    </ul>
+  </section>
+  <section id="select_persona">
+    <h2>Paso 2: Elige un papelito</h2>
+    <ul>
+      <li>
+        <a href="">AMIGO SECRETO</a>
+      </li>
+      <li>
+        <a href="">AMIGO SECRETO</a>
+      </li>
+    </ul>
+  </section>
+  <section id="finish">
+    <h2>¡Mantenlo en secreto!</h2>
+    <ul>
+      <li class="active">
+        <a href="">JOSE DANIEL</a>
+      </li>
+      <li class="placeholder">
+        <a href="">AMIGO SECRETO</a>
+      </li>
+    </ul>
+
+    <a class="action ocultar active">Ocultar</a>
+    <a class="action mostrar">Mostrar</a>
+
+  </section>
+  <footer>
+
+  </footer>
+{% endblock %}

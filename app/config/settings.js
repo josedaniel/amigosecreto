@@ -1,4 +1,4 @@
-/* global __dirname */
+/* global */
 
 /**
  * Custom Server Config
@@ -28,7 +28,7 @@ module.exports = {
   uploadPath: 'public/files',
 
   // Connection to Database
-  connection: null,
+  connection: 'database',
 
   // Custom Settings
   config: {

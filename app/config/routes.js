@@ -6,6 +6,8 @@
 
 module.exports = {
 
-  '/': 'WelcomeController.get'
+  'GET /': 'WebsiteController.get',
+  'GET /api/personas': 'WebsiteController.listPersonas',
+  'POST /api/personas': 'WebsiteController.savePersona',
 
 };

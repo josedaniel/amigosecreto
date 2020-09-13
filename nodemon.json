@@ -8,6 +8,7 @@
     "client/"
   ],
   "env": {
-    "NODE_ENV": "development"
+    "NODE_ENV": "development",
+    "DATABASE": "mongodb+srv://josedaniel:EEGneFPHallyYEhV@josedaniel-dev.ipkgt.azure.mongodb.net/amigosecreto?retryWrites=true&w=majority"
   }
 }

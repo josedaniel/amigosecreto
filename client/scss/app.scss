@@ -1,11 +1,174 @@
-// Foundation Core
 @import "./modules.scss";
-
-// Utility
 @import "./utility.scss";
-
-//
-// Import Containers Styles
-//
 @import "./partials/_index";
 @import "./pages/_index";
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&family=Special+Elite&display=swap');
+
+body{
+  background-image: url('/img/blue-snow.png');
+  padding: 20px;
+
+  h1, h2, h3, h4{
+    font-family: 'Ranchers', cursive;
+    color: #3286f1;
+    text-align: center;
+    width: 100%;
+  }
+
+  h2{
+    margin-bottom: 50px;
+  }
+}
+
+header{
+  text-align: center;
+  padding: 40px 0;
+  img{
+    max-width: 300px;
+    width: 100%;
+  }
+}
+
+section{
+  display: none;
+
+  &.active{
+    display: block;
+  }
+}
+
+#welcome{
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #eee;
+
+    li{
+      border-bottom: 1px solid #eee;
+      display: grid;
+      grid-template-columns: auto 80px;
+      column-gap: 20px;
+      align-items: center;
+
+      &:last-child{
+        border-bottom: none;
+      }
+
+      span{
+        display: block;
+        width: 100%;
+      }
+      .status{
+        text-align: center;
+
+        i{
+          // display: none;
+          color: rgb(16, 199, 71);
+
+          &.active{
+            display: inline-block;
+          }
+        }
+      }
+
+      .name{
+        a{
+          display: block;
+          width: 100%;
+          padding: 20px;
+          font-family: 'Special Elite', cursive;
+          color: rgb(0, 110, 255);
+        }
+      }
+    }
+
+  }
+}
+
+#select_persona{
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    li{
+      margin-bottom: 30px;
+      position: relative;
+
+      a{
+        display: block;
+        width: 100%;
+        padding: 20px;
+        background-color: white;
+        border-radius: 2px;
+        background-image: url('/img/watercolor.png');
+        background-size: cover;
+        z-index: 2;
+        position: relative;
+        box-shadow: 1px 2px 6px 0px #c0c0c0;
+        font-family: 'Special Elite', cursive;
+        color: #383838;
+        letter-spacing: 4px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+#finish{
+  text-align: center;
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 50px;
+
+    li{
+      margin-bottom: 30px;
+      position: relative;
+      display: none;
+
+      &.active{
+        display: block;
+      }
+
+      a{
+        display: block;
+        width: 100%;
+        padding: 20px;
+        background-color: white;
+        border-radius: 2px;
+        background-size: cover;
+        z-index: 2;
+        position: relative;
+        box-shadow: 1px 2px 6px 0px #c0c0c0;
+        font-family: 'Special Elite', cursive;
+        color: #999;
+        letter-spacing: 4px;
+        text-align: center;
+      }
+    }
+  }
+
+  a.action{
+    display: inline-block;
+    padding: 15px 30px 10px 30px;
+    background-color: #800070;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Special Elite', cursive;
+    border-radius: 2px;
+    line-height: rem-calc(16);
+    display: none;
+
+    &.active{
+      display: inline-block;
+    }
+  }
+}

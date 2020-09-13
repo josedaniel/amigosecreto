@@ -39,7 +39,10 @@ module.exports = function loadDatabaseApplication() {
   }
 
   const connectionProps = {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
   };
 
   if (!mongoose.connection.readyState) {
@@ -69,14 +72,14 @@ module.exports = function loadDatabaseApplication() {
 
       const schema = mongoose.Schema(attributes);
       delete current.attributes;
-      schema.statics = Object.assign({}, current);
+      schema.statics = { ...current };
       schema.plugin(paginate);
 
       // Indexes
       if (current.indexes !== undefined) {
         if (Array.isArray(current.indexes)) {
           const tmp = current.indexes;
-          Object.keys(tmp).forEach( index => schema.index(tmp[index]));
+          Object.keys(tmp).forEach( (index) => schema.index(tmp[index]));
         } else if (typeof current.indexes === 'object') {
           schema.index(current.indexes);
         }
@@ -86,7 +89,7 @@ module.exports = function loadDatabaseApplication() {
       if (current.plugins !== undefined) {
         if (Array.isArray(current.plugins)) {
           const tmp = current.plugins;
-          Object.keys(tmp).forEach( plugin => schema.plugin(tmp[plugin]));
+          Object.keys(tmp).forEach( (plugin) => schema.plugin(tmp[plugin]));
         } else if (typeof current.plugins === 'object') {
           schema.plugin(current.plugins);
         }
