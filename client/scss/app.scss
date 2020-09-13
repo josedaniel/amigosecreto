@@ -5,8 +5,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Ranchers&family=Special+Elite&display=swap');
 
 body{
-  background-image: url('/img/blue-snow.png');
   padding: 20px;
+  background-image: url("/img/blue-snow.png");
+
 
   h1, h2, h3, h4{
     font-family: 'Ranchers', cursive;
@@ -17,6 +18,17 @@ body{
 
   h2{
     margin-bottom: 50px;
+  }
+}
+
+.loading{
+  width: 100%;
+  text-align: right;
+  opacity: 0;
+  transition: all .2s;
+
+  &.active{
+    opacity: 1;
   }
 }
 
@@ -31,6 +43,8 @@ header{
 
 section{
   display: none;
+  max-width: 375px;
+  margin: 0 auto;
 
   &.active{
     display: block;
@@ -65,7 +79,7 @@ section{
         text-align: center;
 
         i{
-          // display: none;
+          display: none;
           color: rgb(16, 199, 71);
 
           &.active{
@@ -80,7 +94,7 @@ section{
           width: 100%;
           padding: 20px;
           font-family: 'Special Elite', cursive;
-          color: rgb(0, 110, 255);
+          color: rgb(70, 70, 70);
         }
       }
     }
@@ -171,4 +185,12 @@ section{
       display: inline-block;
     }
   }
+}
+
+
+footer{
+  text-align: center;
+  margin-top: 40px;
+  font-weight: bold;
+  font-size: rem-calc(14);
 }

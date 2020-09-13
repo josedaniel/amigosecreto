@@ -1,25 +1,15 @@
 {% extends "_shared/templates/default.njk" %}
 
 {% block content %}
+  <div class="loading">
+    🧠
+  </div>
   <header>
     <img src="/img/logo.png" alt="Amigo Secreto" />
   </header>
-  <section id="welcome" class="active">
+  <section id="welcome">
     <h2>Paso 1: Elige tu nombre</h2>
-    <ul>
-      <li>
-        <span class="name">
-          <a href="">Jose Daniel</a>
-        </span>
-        <span class="status"><i class="mdi mdi-check-circle"></i></span>
-      </li>
-      <li>
-        <span class="name">
-          <a href="">Jose Daniel</a>
-        </span>
-        <span class="status"><i class="mdi mdi-check-circle"></i></span>
-      </li>
-    </ul>
+    <ul></ul>
   </section>
   <section id="select_persona">
     <h2>Paso 2: Elige un papelito</h2>
@@ -43,11 +33,11 @@
       </li>
     </ul>
 
-    <a class="action ocultar active">Ocultar</a>
-    <a class="action mostrar">Mostrar</a>
+    <a class="action ocultar active" onClick="_app.ocultar(event)">Ocultar</a>
+    <a class="action mostrar" onClick="_app.mostrar(event)">Mostrar</a>
 
   </section>
   <footer>
-
+    <p>Valor del regalo: $20k. Entrega de regalos: sábado 26 de septiembre 3pm.</p>
   </footer>
 {% endblock %}
