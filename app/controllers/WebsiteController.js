@@ -7,7 +7,7 @@
 module.exports = {
 
   get: (req, res) => {
-    res.render('index.njk', { test: 'test' });
+    res.render('index.njk', { test: 'none' });
   },
 
   listPersonas: (req, res) => {
